@@ -3,7 +3,8 @@
 import Vue from 'vue';
 import { BButton } from 'bootstrap-vue'
 import { ModalPlugin } from 'bootstrap-vue'
-
+import SPAStyles from './bundle.js'
+Vue.use(SPAStyles)
 Vue.use(ModalPlugin)
 
 import './style.css';
@@ -21,18 +22,20 @@ const vue = new Vue({
   <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')">Launch demo modal</b-button>
   
   <b-modal id="bv-modal-example" hide-footer>
-    <template v-slot:modal-title class="alert-primary">
-      <b-alert show variant="primary" class="alert-primary"><i class="fa fa-fw fa-info-circle"></i> Modal Example</b-alert>
+    <template v-slot:modal-title class="modal-header">
+      <alert show ><i class="fa fa-fw fa-exclamation-triangle"></i> Claims must be from a single Payor for comment</alert>
     </template>
-    <div class="d-block text-center">
-      <h3>Hello From This Modal!</h3>
+    <div class="modal-body">
+      <p>You can only comment on agreements from a single a payor.</p>
+      <p>Select claims from one payor for comment. If necessary you can then select additional claims from different payor for comment.</p>
     </div>
-    <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example')">Close Me</b-button>
+    <div class="modal-footer">
+      <b-button class="btn-success" @click="$bvModal.hide('bv-modal-example')">OK</b-button>
+      <b-button class="btn-danger" @click="$bvModal.hide('bv-modal-example')">Cancel</b-button>
+    </div>
   </b-modal>
 
-  <div class="alert-primary" style="margin:15px;">
-  <b-alert show variant="primary">  <i class="fa fa-fw fa-info-circle"></i> Primary Alert</b-alert>
-  </div>
+  
 </div>`
 });
 
