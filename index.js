@@ -30,7 +30,7 @@ const vue = new Vue({
       <p>Select claims from one payor for comment. If necessary you can then select additional claims from different payor for comment.</p>
     </div>
     <div class="modal-footer">
-      <b-button class="btn-danger" @click="$bvModal.hide('bv-modal-example')">Cancel</b-button>
+      <b-button class="btn-success" @click="$bvModal.hide('bv-modal-example')">OK</b-button>
     </div>
   </b-modal>
 
