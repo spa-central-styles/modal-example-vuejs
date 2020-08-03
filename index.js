@@ -22,8 +22,8 @@ const vue = new Vue({
   <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')">Launch demo modal</b-button>
   
   <b-modal id="bv-modal-example" hide-footer>
-    <template v-slot:modal-title class="modal-header">
-      <alert show ><i class="fa fa-fw fa-exclamation-triangle"></i> Claims must be from a single Payor for comment</alert>
+    <template v-slot:modal-title class="modal-header p-0">
+      <alert show ><i class="fa fa-fw fa-exclamation-triangle"></i>Claims must be from a single Payor for comment</alert>
     </template>
     <div class="modal-body">
       <p>You can only comment on agreements from a single a payor.</p>
