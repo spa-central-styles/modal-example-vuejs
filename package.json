@@ -7,6 +7,6 @@
     "jquery": "3.5.1",
     "popper.js": "1.16.1",
     "spa-central-styles-free": "^1.0.5",
-    "vue": "2.6.11"
+    "vue": "3.0.0"
   }
 }
